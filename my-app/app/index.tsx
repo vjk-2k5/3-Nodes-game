@@ -58,7 +58,7 @@ export default function Index() {
           setLastMove({ grid: grid, score: score });
           setGrid(newGrid);
         } else {
-          // No match, revert swap
+          
           setSelectedTile(null);
         }
       }
@@ -91,7 +91,6 @@ export default function Index() {
         <Text style={styles.gameOverText}>Game Over</Text>
         <Text style={styles.finalScoreText}>Final Score: {score}</Text>
         <Button title="Restart" onPress={handleRestart} />
-        <Button title="Exit" onPress={() => {}} />
       </View>
     );
   }
