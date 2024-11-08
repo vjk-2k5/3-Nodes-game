@@ -35,13 +35,13 @@ export default function Index() {
   }, [timeLeft]);
 
   useEffect(() => {
-    // Check for matches after any grid update
+   
     let matches = findMatches(grid);
     if (matches.length > 0) {
       setGrid(removeMatchesAndUpdateGrid(grid, matches));
       setScore((prev) => prev + matches.length * 10);
     } else if (!hasPossibleMoves(grid)) {
-      // No possible moves, reshuffle the grid
+      
       let newGrid = generateInitialGrid();
       setGrid(newGrid);
     }
@@ -58,7 +58,7 @@ export default function Index() {
           setLastMove({ grid: grid, score: score });
           setGrid(newGrid);
         } else {
-          // No match, revert swap
+         
           setSelectedTile(null);
         }
       }
